@@ -176,3 +176,11 @@ gpg --output doc_cifrado.txt --encrypt --recipient 9A8C1BA9AADE1E5F261A6B8A35513
 # you may answer the next question with yes.
 
 # Use this key anyway? (y/N) y
+
+gpg --decrypt mensaje_cifrado.txt
+
+# gpg: encrypted with rsa4096 key, ID 545A4A9128BC82C3, created 2026-03-23
+#      "Francis Acuña (Hola) <panchode05@gmail.com>"
+# Hola Francisco David
+
+gpg --output doc_no_cifrado.txt
