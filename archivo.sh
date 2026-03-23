@@ -144,3 +144,8 @@ gpg --armor --export-secret-keys # 48E9515BBA7B9AE8
 # =ETVs
 # -----END PGP PRIVATE KEY BLOCK-----
 
+gpg --import llave_de_MIPANA.asc # Importo la llave de mi compañero
+# gpg: key 35513F1E4D3380C9: public key "Ivan Fernando Gualotuña Bolagay (12345678) <ivanfernando10q@gmail.com>" imported
+# gpg: Total number processed: 1
+# gpg:               imported: 1
+
