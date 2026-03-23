@@ -162,3 +162,5 @@ gpg --list-keys
 # sub   rsa4096 2026-03-18 [E] [expires: 2027-03-18]
 
 echo "¿Un billar?" > doc_no_cifrado.txt
+
+gpg --output doc_cifrado.txt --encrypt --recipient 9A8C1BA9AADE1E5F261A6B8A35513F1E4D3380C9 doc_no_cifrado.txt
