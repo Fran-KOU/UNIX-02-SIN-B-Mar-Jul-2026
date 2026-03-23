@@ -164,3 +164,15 @@ gpg --list-keys
 echo "¿Un billar?" > doc_no_cifrado.txt
 
 gpg --output doc_cifrado.txt --encrypt --recipient 9A8C1BA9AADE1E5F261A6B8A35513F1E4D3380C9 doc_no_cifrado.txt
+
+# gpg: 1A4B43578FF5785F: There is no assurance this key belongs to the named user
+
+# sub  rsa4096/1A4B43578FF5785F 2026-03-18 Ivan Fernando Gualotuña Bolagay (12345678) <ivanfernando10q@gmail.com>
+# Primary key fingerprint: 9A8C 1BA9 AADE 1E5F 261A  6B8A 3551 3F1E 4D33 80C9
+#      Subkey fingerprint: AFD8 EBCC AC63 3B99 E077  8486 1A4B 4357 8FF5 785F
+
+# It is NOT certain that the key belongs to the person named
+# in the user ID.  If you *really* know what you are doing,
+# you may answer the next question with yes.
+
+# Use this key anyway? (y/N) y
