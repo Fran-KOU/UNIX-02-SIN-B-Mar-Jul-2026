@@ -199,3 +199,45 @@ gpg --verify Ivan.txt.asc
 # Primary key fingerprint: 9A8C 1BA9 AADE 1E5F 261A  6B8A 3551 3F1E 4D33 80C9
 
 gpg --edit-key 9A8C1BA9AADE1E5F261A6B8A35513F1E4D3380C9
+
+#gpg (GnuPG) 2.4.4; Copyright (C) 2024 g10 Code GmbH
+#This is free software: you are free to change and redistribute it.
+#There is NO WARRANTY, to the extent permitted by law.
+
+
+#pub  rsa4096/35513F1E4D3380C9
+#     created: 2026-03-18  expires: 2027-03-18  usage: SC  
+#     trust: unknown       validity: unknown
+#sub  rsa4096/1A4B43578FF5785F
+#     created: 2026-03-18  expires: 2027-03-18  usage: E   
+#[ unknown] (1). Ivan Fernando Gualotuña Bolagay (12345678) <ivanfernando10q@gmail.com>
+
+#gpg> trust
+#pub  rsa4096/35513F1E4D3380C9
+#     created: 2026-03-18  expires: 2027-03-18  usage: SC  
+#     trust: unknown       validity: unknown
+#sub  rsa4096/1A4B43578FF5785F
+#     created: 2026-03-18  expires: 2027-03-18  usage: E   
+#[ unknown] (1). Ivan Fernando Gualotuña Bolagay (12345678) <ivanfernando10q@gmail.com>
+
+#Please decide how far you trust this user to correctly verify other users' keys
+#(by looking at passports, checking fingerprints from different sources, etc.)
+
+#  1 = I don't know or won't say
+#  2 = I do NOT trust
+#  3 = I trust marginally
+#  4 = I trust fully
+#  5 = I trust ultimately
+#  m = back to the main menu
+
+#Your decision? 4
+
+#pub  rsa4096/35513F1E4D3380C9
+#     created: 2026-03-18  expires: 2027-03-18  usage: SC  
+#     trust: full          validity: unknown
+#sub  rsa4096/1A4B43578FF5785F
+#     created: 2026-03-18  expires: 2027-03-18  usage: E   
+#[ unknown] (1). Ivan Fernando Gualotuña Bolagay (12345678) <ivanfernando10q@gmail.com>
+#Please note that the shown key validity is not necessarily correct
+#unless you restart the program.
+
