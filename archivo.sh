@@ -185,9 +185,15 @@ gpg --decrypt mensaje_cifrado.txt
 
 gpg --clearsign mensaje_cifrado.txt
 
+# Crea una firma digital
+
 gpg --sign mensaje_cifrado.txt.asc
 
+# firma en binario
+
 gpg --detach-sign mensaje_cifrado.txt.asc.gpg
+
+# Crea una firma aparte
 
 gpg --verify Ivan.txt.asc
 
