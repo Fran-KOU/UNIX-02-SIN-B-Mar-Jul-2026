@@ -241,3 +241,36 @@ gpg --edit-key 9A8C1BA9AADE1E5F261A6B8A35513F1E4D3380C9
 #Please note that the shown key validity is not necessarily correct
 #unless you restart the program.
 
+gpg --sign-key 9A8C1BA9AADE1E5F261A6B8A35513F1E4D3380C9
+
+#gpg: checking the trustdb
+#gpg: marginals needed: 3  completes needed: 1  trust model: pgp
+#gpg: depth: 0  valid:   1  signed:   0  trust: 0-, 0q, 0n, 0m, 0f, 1u
+#gpg: next trustdb check due at 2027-03-23
+#pub  rsa4096/35513F1E4D3380C9
+
+#     created: 2026-03-18  expires: 2027-03-18  usage: SC  
+#     trust: full          validity: unknown
+#sub  rsa4096/1A4B43578FF5785F
+#     created: 2026-03-18  expires: 2027-03-18  usage: E   
+#[ unknown] (1). Ivan Fernando Gualotuña Bolagay (12345678) <ivanfernando10q@gmail.com>
+
+
+#pub  rsa4096/35513F1E4D3380C9
+#     created: 2026-03-18  expires: 2027-03-18  usage: SC  
+#     trust: full          validity: unknown
+# Primary key fingerprint: 9A8C 1BA9 AADE 1E5F 261A  6B8A 3551 3F1E 4D33 80C9
+
+#     Ivan Fernando Gualotuña Bolagay (12345678) <ivanfernando10q@gmail.com>
+
+#This key is due to expire on 2027-03-18.
+#Are you sure that you want to sign this key with your
+#key "Francis Acuña (Hola) <panchode05@gmail.com>" (48E9515BBA7B9AE8)
+
+#Really sign? (y/N) y
+
+gpg --verify mensaje_cifrado.txt.asc
+
+#gpg: Signature made Wed Mar 25 16:13:47 2026 UTC
+#gpg:                using RSA key 9A8C1BA9AADE1E5F261A6B8A35513F1E4D3380C9
+#gpg: Good signature from "Ivan Fernando Gualotuña Bolagay (12345678) <ivanfernando10q@gmail.com>" [full]
