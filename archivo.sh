@@ -279,3 +279,13 @@ gpg --output doc_no_cifrado_ivan.txt --encrypt --sign --recipient 9A8C1BA9AADE1E
 
 # Cifra y firma un documento
 
+gpg --decrypt doc_cifrado_firmado_francis.txt
+
+#gpg: encrypted with rsa4096 key, ID 545A4A9128BC82C3, created 2026-03-23
+#      "Francis Acuña (Hola) <panchode05@gmail.com>"
+#Hola Francisco David
+#gpg: Signature made Wed Mar 25 17:14:30 2026 UTC
+#gpg:                using RSA key 9A8C1BA9AADE1E5F261A6B8A35513F1E4D3380C9
+#gpg: Good signature from "Ivan Fernando Gualotuña Bolagay (12345678) <ivanfernando10q@gmail.com>" [full]
+
+# Desencriptamos el archivo que me mando mi compa
