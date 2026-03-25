@@ -274,3 +274,8 @@ gpg --verify mensaje_cifrado.txt.asc
 #gpg: Signature made Wed Mar 25 16:13:47 2026 UTC
 #gpg:                using RSA key 9A8C1BA9AADE1E5F261A6B8A35513F1E4D3380C9
 #gpg: Good signature from "Ivan Fernando Gualotuña Bolagay (12345678) <ivanfernando10q@gmail.com>" [full]
+
+gpg --output doc_no_cifrado_ivan.txt --encrypt --sign --recipient 9A8C1BA9AADE1E5F261A6B8A35513F1E4D3380C9 doc_no_cifrado.txt
+
+# Cifra y firma un documento
+
