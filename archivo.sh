@@ -183,4 +183,6 @@ gpg --decrypt mensaje_cifrado.txt
 #      "Francis Acuña (Hola) <panchode05@gmail.com>"
 # Hola Francisco David
 
+gpg --clearsign mensaje_cifrado.txt
+
 gpg --output doc_no_cifrado.txt
