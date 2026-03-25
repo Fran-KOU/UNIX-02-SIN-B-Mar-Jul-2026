@@ -185,4 +185,6 @@ gpg --decrypt mensaje_cifrado.txt
 
 gpg --clearsign mensaje_cifrado.txt
 
-gpg --output doc_no_cifrado.txt
+gpg --output mensaje_cifrado.txt
+
+gpg --sign mensaje_cifrado.txt.asc
