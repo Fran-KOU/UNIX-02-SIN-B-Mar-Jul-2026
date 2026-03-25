@@ -185,6 +185,17 @@ gpg --decrypt mensaje_cifrado.txt
 
 gpg --clearsign mensaje_cifrado.txt
 
-gpg --output mensaje_cifrado.txt
-
 gpg --sign mensaje_cifrado.txt.asc
+
+gpg --detach-sign mensaje_cifrado.txt.asc.gpg
+
+gpg --verify Ivan.txt.asc
+
+# Signature made Wed Mar 25 16:13:47 2026 UTC
+#                using RSA key 9A8C1BA9AADE1E5F261A6B8A35513F1E4D3380C9
+# Good signature from "Ivan Fernando Gualotuña Bolagay (12345678) <ivanfernando10q@gmail.com>" [unknown]
+# WARNING: This key is not certified with a trusted signature!
+#          There is no indication that the signature belongs to the owner.
+# Primary key fingerprint: 9A8C 1BA9 AADE 1E5F 261A  6B8A 3551 3F1E 4D33 80C9
+
+gpg --edit-key 9A8C1BA9AADE1E5F261A6B8A35513F1E4D3380C9
