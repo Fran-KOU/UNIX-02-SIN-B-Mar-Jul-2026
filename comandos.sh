@@ -10,6 +10,6 @@ sudo parted -l && echo -e "\n---\n" && lsblk -f && echo e "\n---\n" # lists the 
 [ -d /sys/firmware/efi ] && echo "UEFI" || echo "BIOS" # If the directory exists (-d returns true), the system has booted into UEFI mode and the command prints "UEFI", 
 # if the directory does not exist (-d returns false), the system has booted into legacy BIOS mode and the command prints "BIOS".
 
-echo "esto es un archivo" > archivo.txt 
+echo "esto es un archivo" > archivo.txt # Create a file with the text in quotes.
 
-stat archivo.txt
+stat archivo.txt # Shows detailed information about files and system files.
