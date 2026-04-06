@@ -14,3 +14,9 @@
 [1]+  Done                    cd
 # Changes to the main directory, same function than the "~" or the "cd" command without specify.
 
+@Fran-KOU ➜ ~ $ mkdir proyecto
+# It creates a brand new directory with the name "proyecto"
+
+@Fran-KOU ➜ ~ $ cd proyecto/
+# Changes to our new directory
+
