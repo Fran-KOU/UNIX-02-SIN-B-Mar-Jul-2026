@@ -57,5 +57,87 @@ Access: 2026-04-06 12:53:26.168751322 +0000
 Modify: 2026-04-06 12:53:26.169751322 +0000
 Change: 2026-04-06 12:53:26.169751322 +0000
  Birth: 2026-04-06 12:53:26.168751322 +0000
-
 # Same explication as the previous directory, but here we have 3 hardlinks and now the cd is a physical one.
+
+@Fran-KOU ➜ ~/proyecto $ pwd
+/home/codespace/proyecto
+# Print the actual directory
+
+@Fran-KOU ➜ ~/proyecto $ whoami
+codespace
+# Shows who i am.
+
+@Fran-KOU ➜ ~/proyecto $ ls
+# Just list
+
+@Fran-KOU ➜ ~/proyecto $ ls -l
+total 0
+# List the actual directory
+
+@Fran-KOU ➜ ~/proyecto $ ls -la
+total 12
+drwxr-xr-x 2 codespace codespace 4096 Apr  6 12:35 .
+drwxr-x--- 1 codespace codespace 4096 Apr  6 12:56 ..
+# List all the files, even the hidden ones
+
+@Fran-KOU ➜ ~/proyecto $ ls -lh
+total 0
+# List the files in human readable text
+
+@Fran-KOU ➜ ~/proyecto $ ls -lt
+total 0
+# List the files by date.
+
+@Fran-KOU ➜ ~/proyecto $ ls /etc | head -20
+ODBCDataSources
+PackageKit
+X11
+adduser.conf
+alternatives
+apache2
+apparmor.d
+apt
+bash.bashrc
+bash_completion
+bash_completion.d
+bindresvport.blacklist
+binfmt.d
+ca-certificates
+ca-certificates.conf
+cloud
+credstore
+credstore.encrypted
+cron.d
+cron.daily
+# It lists all the files and directories found within the system configuration directory /etc, 
+# and since it is piped (|) with head -20, the final result is limited to showing only the first 20 lines of that list. 
+
+@Fran-KOU ➜ ~/proyecto $ ls /dev | head -20
+autofs
+bsg
+btrfs-control
+core
+cpu_dma_latency
+cuse
+dma_heap
+dri
+ecryptfs
+fb0
+fd
+full
+fuse
+hpet
+hwrng
+input
+kmsg
+kvm
+loop-control
+loop0
+# Displays the first 20 device files present in the system /dev directory
+
+@Fran-KOU ➜ ~/proyecto $ ls -la
+total 12
+drwxr-xr-x 2 codespace codespace 4096 Apr  6 12:35 .
+drwxr-x--- 1 codespace codespace 4096 Apr  6 12:56 ..
+# Display the name. date. size, owner group, owne user, links number and type and permissions
+
