@@ -20,3 +20,9 @@
 @Fran-KOU ➜ ~ $ cd proyecto/
 # Changes to our new directory
 
+@Fran-KOU ➜ ~/proyecto $ ls -lai
+total 12
+926182 drwxr-xr-x 2 codespace codespace 4096 Apr  6 12:35 .
+918515 drwxr-x--- 1 codespace codespace 4096 Apr  6 12:35 ..
+
+# List the files of the directory, shows the inodes and the hardlinks
