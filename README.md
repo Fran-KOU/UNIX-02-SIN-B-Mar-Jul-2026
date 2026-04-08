@@ -48,3 +48,17 @@ sudo make CONFIG_PREFIX=/boot-files/initramfs install
 busybox > .config > CONFIG_TC=n
 
 make -j 2
+
+cd /boot-files/initramfs
+
+sudo vi init
+
+sudo rm linuxrc
+
+sudo chmod +x init
+
+sudo sed -i 's/CONFIG_STATIC=.*/CONFIG_STATIC=y/' .config
+
+sudo find . | cpio -o -H newc > ../init.cpio cd ..
+
+sudo sh -c ´find . | cpio -o H newc > ../ init.cpio'
