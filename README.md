@@ -34,3 +34,17 @@ sudo cp arch/x86/boot/bzImage /boot-files/
 cd ..
 
 git clone --depth 1 https://git.busybox.net/busybox
+
+cd busybox
+
+make menuconfig
+
+make -j 2
+
+sudo mkdir /boot-files/initramfs
+
+sudo make CONFIG_PREFIX=/boot-files/initramfs install
+
+busybox > .config > CONFIG_TC=n
+
+make -j 2
