@@ -26,3 +26,10 @@ cd linux
 make menuconfig
 
 make-j 2
+
+sudo mkdir /boot-files
+
+sudo cp arch/x86/boot/bzImage /boot-files/
+
+cd ..
+
