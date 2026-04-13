@@ -46,3 +46,19 @@ man ls
 
 # Create a shallow clone with a history truncated to the specified number of commits. Implies --single-branch unless --no-single-branch is given to fetch the
 # histories near the tips of all branches. If you want to clone submodules shallowly, also pass --shallow-submodules.
+
+chmod +x script.sh 
+
+# Everyone can execute
+
+chmod u+x script.sh
+
+# Only the owner can execue
+
+chmod o-r script.sh
+
+# Remove reading to "others"
+
+chmod u+rw,go-rwx privado
+
+# Only the owner can read/write, no one else can
