@@ -29,3 +29,15 @@ rm -rf
 rmdir -- -rf
 
 # With the "--" it says to the complier that the next command is an attribute. It remove the directory previously created.
+
+git clone --depth 1 https://github.com/torvalds/linux.git
+
+# depth is an option that takes the number as a value. Here the value is one and brings one commit.
+
+ls --help
+
+# Shows a summarized manual
+
+man ls
+
+# Shows the entire manual
