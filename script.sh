@@ -75,3 +75,8 @@ echo "hola" | sudo tee /etc/archivo_protegido > /dev/null
 echo "hola" | sudo tee /etc/archivo_protegido
 
 # Unlike the previous command, this command actually shows the message "hola"
+
+sudo sh -c 'echo "chao" >> /etc/archivo_protegido'
+
+# "sh" open the command interpreter and the "-c" execute all the rest of the command that is between " '' ".
+# And the ">>" adds a new text line on the already exist file, in this case "chao"
