@@ -62,3 +62,16 @@ chmod o-r script.sh
 chmod u+rw,go-rwx privado
 
 # Only the owner can read/write, no one else can
+
+sudo echo "hola" > /etc/archivo_protegido
+
+# The command doesnt work because we doesnt have the enough permissions and the "sudo" only works with the first order "echo".
+
+echo "hola" | sudo tee /etc/archivo_protegido > /dev/null
+
+# Generate a text ("hola"), and uses the "|" as the entrance of the next command, tee is a tool that read and write in two different places,
+# on the screen and on the specific file. "/dev/null" acts as a black hole
+
+echo "hola" | sudo tee /etc/archivo_protegido
+
+# Unlike the previous command, this command actually shows the message "hola"
