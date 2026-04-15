@@ -80,3 +80,7 @@ sudo sh -c 'echo "chao" >> /etc/archivo_protegido'
 
 # "sh" open the command interpreter and the "-c" execute all the rest of the command that is between " '' ".
 # And the ">>" adds a new text line on the already exist file, in this case "chao"
+
+sudo su -
+
+# Change my user to the root, if we want to log out we type "exit"
