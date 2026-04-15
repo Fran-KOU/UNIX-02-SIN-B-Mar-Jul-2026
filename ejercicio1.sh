@@ -34,3 +34,22 @@ ls -l hola.sh
 ./hola.sh
 
 # Print the content
+# Hola desde mi primer script
+
+# Does this commands need "sudo"?
+
+ls /etc
+
+# No, it doesnt need, read is public
+
+touch /etc/prueba.txt
+
+# It needs, ./etc belongs to the root
+
+mkdir ~/mi_carpeta
+
+# Doesnt need, its our house
+
+apt install cowsay
+
+# It needs, install packages touch directories of the system.
