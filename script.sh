@@ -84,3 +84,11 @@ sudo sh -c 'echo "chao" >> /etc/archivo_protegido'
 sudo su -
 
 # Change my user to the root, if we want to log out we type "exit"
+
+echo "$HOME"
+
+# Execute the directory
+
+echo '$HOME'
+
+# Execute as a string
