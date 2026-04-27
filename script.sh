@@ -246,3 +246,11 @@ sudo chown luna:grupo_test mi_archivo
 # Change the owner of the groups to luna
 
 ls -l mi_archivo
+
+mkdir -p proyecto/sub
+
+touch proyecto/readme proyecto/sub/datos
+
+sudo chown -R luna:grupo_test proyecto
+
+sudo ls -lR proyecto
