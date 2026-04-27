@@ -92,3 +92,127 @@ echo "$HOME"
 echo '$HOME'
 
 # Execute as a string
+
+umask
+
+# Shows the default mask for the operative system
+
+touch archivo1
+
+# Creates a brand new file
+
+mkdir directorio1
+
+# Creates a new directory
+
+ls -l
+
+# Shows the list of permissions
+
+# @Fran-KOU ➜ /workspaces/UNIX-02-SIN-B-Mar-Jul-2026 (boot_exploration) $ ls -l
+# total 60
+# -rw-rw-rw-  1 codespace root      34523 Apr 13 12:15 LICENSE
+# -rw-rw-rw-  1 codespace root         69 Apr 13 12:23 README.md
+# -rw-rw-rw-  1 codespace codespace     0 Apr 27 12:31 archivo1
+# drwxrwxrwx+ 2 codespace codespace  4096 Apr 27 12:32 directorio1
+# -rw-rw-rw-  1 codespace codespace  1083 Apr 15 13:34 ejercicio1.sh
+# -rw-rw-rw-  1 codespace codespace   602 Apr 15 13:41 ejercicio2.sh
+# -rwxrwxrwx  1 codespace codespace    45 Apr 15 13:02 hola.sh
+# -rwxr-xr-x  1 codespace codespace     0 Apr 15 13:36 prueba.txt
+
+umask 027
+
+# Change the permissions, 0 means that the user doesnt have any permission, 2 means that the group only can read and 7 means that the others have all the permissions "rwx"
+
+# @Fran-KOU ➜ /workspaces/UNIX-02-SIN-B-Mar-Jul-2026 (boot_exploration) $ umask
+# 0027
+
+touch archivo2
+
+# Create a new file
+
+mkdir directorio2
+
+# Creates a new directory
+
+ls -l
+
+# @Fran-KOU ➜ /workspaces/UNIX-02-SIN-B-Mar-Jul-2026 (boot_exploration) $ ls -l
+# total 64
+# -rw-rw-rw-  1 codespace root      34523 Apr 13 12:15 LICENSE
+# -rw-rw-rw-  1 codespace root         69 Apr 13 12:23 README.md
+# -rw-rw-rw-  1 codespace codespace     0 Apr 27 12:31 archivo1
+# -rw-rw-rw-  1 codespace codespace     0 Apr 27 12:37 archivo2
+# drwxrwxrwx+ 2 codespace codespace  4096 Apr 27 12:32 directorio1
+# drwxrwxrwx+ 2 codespace codespace  4096 Apr 27 12:37 directorio2
+# -rw-rw-rw-  1 codespace codespace  1083 Apr 15 13:34 ejercicio1.sh
+# -rw-rw-rw-  1 codespace codespace   602 Apr 15 13:41 ejercicio2.sh
+# -rwxrwxrwx  1 codespace codespace    45 Apr 15 13:02 hola.sh
+# -rwxr-xr-x  1 codespace codespace     0 Apr 15 13:36 prueba.txt
+# -rwxrwxrwx  1 codespace codespace  2799 Apr 27 12:37 script.sh
+
+umask 077
+
+# @Fran-KOU ➜ /workspaces/UNIX-02-SIN-B-Mar-Jul-2026 (boot_exploration) $ umask
+# 0077
+
+touch secreto.txt
+
+# Creates a file named "secreto.txt"
+
+mkdir privado
+
+# Creates a directory
+
+ls -l
+
+# @Fran-KOU ➜ /workspaces/UNIX-02-SIN-B-Mar-Jul-2026 (boot_exploration) $ ls -l
+# total 72
+# -rw-rw-rw-  1 codespace root      34523 Apr 13 12:15 LICENSE
+# -rw-rw-rw-  1 codespace root         69 Apr 13 12:23 README.md
+# -rw-rw-rw-  1 codespace codespace     0 Apr 27 12:31 archivo1
+# -rw-rw-rw-  1 codespace codespace     0 Apr 27 12:37 archivo2
+# drwxrwxrwx+ 2 codespace codespace  4096 Apr 27 12:32 directorio1
+# drwxrwxrwx+ 2 codespace codespace  4096 Apr 27 12:37 directorio2
+# -rw-rw-rw-  1 codespace codespace  1083 Apr 15 13:34 ejercicio1.sh
+# -rw-rw-rw-  1 codespace codespace   602 Apr 15 13:41 ejercicio2.sh
+# -rwxrwxrwx  1 codespace codespace    45 Apr 15 13:02 hola.sh
+# drwxrwxrwx+ 2 codespace codespace  4096 Apr 27 12:41 privado
+# -rwxr-xr-x  1 codespace codespace     0 Apr 15 13:36 prueba.txt
+# -rwxrwxrwx  1 codespace codespace  4528 Apr 27 12:40 script.sh
+# -rw-rw-rw-  1 codespace codespace     0 Apr 27 12:41 secreto.txt
+
+sudo apt-get update
+
+sudo apt-get install acl
+
+sudo chown -R $(whoami) .
+
+sudo setfacl -bnR .
+
+whoami
+
+# shows the name of the owner
+
+echo "Hola" > mi_archivo
+
+# Writes "Hola" on a new file named "mi_archivo"
+
+ls -l mi_archivo
+
+# List the permissions of the file
+
+useradd -m -s /usr/bin/zsh luna
+
+# Add a new user named "luna", but it needs "sudo" to work
+
+chown luna mi_archivo
+
+# Change the owner of the file to luna, but it needs "sudo" as well
+
+ls -l mi_archivo
+
+# Shows the permissions of the file
+
+# @Fran-KOU ➜ /workspaces/UNIX-02-SIN-B-Mar-Jul-2026 (boot_exploration) $ ls -l mi_archivo
+# -rw-r--r-- 1 luna codespace 5 Apr 27 13:13 mi_archivo
