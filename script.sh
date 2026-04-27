@@ -216,3 +216,33 @@ ls -l mi_archivo
 
 # @Fran-KOU ➜ /workspaces/UNIX-02-SIN-B-Mar-Jul-2026 (boot_exploration) $ ls -l mi_archivo
 # -rw-r--r-- 1 luna codespace 5 Apr 27 13:13 mi_archivo
+
+groups
+
+# Show the groups
+
+groupadd grupo_test
+
+# Adds a new group, needs sudo to work
+
+touch comun
+
+ls -l comun
+
+usermod -a -G grupo_test luna
+
+# Adds a new user to the group
+
+chgrp grupo_test comun
+
+# Add the group to the file "comun"
+
+ls -l comun
+
+# -rw-r----- 1 codespace grupo_test 0 Apr 27 13:39 comun
+
+sudo chown luna:grupo_test mi_archivo
+
+# Change the owner of the groups to luna
+
+ls -l mi_archivo
