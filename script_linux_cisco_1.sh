@@ -31,3 +31,27 @@ pwd
 
 mkdir Documents
 # We create a new directory for the exercises
+
+cd Documents
+# It changes the current directory for the "Documents" directory
+
+cd /
+# Moves to the root directory
+
+cd /workspaces/UNIX-02-SIN-B-Mar-Jul-2026
+# Moves to the main directory
+
+pwd
+# To confirm the directory
+
+cd Documents
+cd School/Art
+# This is how a relative route is used, first, changing the directory to the main "Documents" and then
+# move to the determined directory
+
+cd ..
+# The character .. always represents a higher directory relative to the current directory.
+
+cd ~
+# To move to the main directory
+
