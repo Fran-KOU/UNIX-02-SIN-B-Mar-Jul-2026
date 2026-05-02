@@ -14,3 +14,10 @@ aptitude moo
 
 ls -l
 # List the files with more information and on a vertical format
+
+ls -r
+# List the files on an inverted order
+
+ls -lr
+# Combine the two formats, inverted order and on a vertical format
+
