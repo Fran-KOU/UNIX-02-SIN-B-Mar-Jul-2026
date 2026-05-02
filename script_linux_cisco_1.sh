@@ -1,8 +1,3 @@
-# This lab has two user accounts:
-
-# root     :: netlab123
-# sysadmin :: netlab123
-
 ls
 # List the files in the actual directory
 
@@ -55,3 +50,18 @@ cd ..
 cd ~
 # To move to the main directory
 
+ls -l /var/log/
+# List the type of file, permissions, number of direct links, owner, group owner, size of the file, timestamp
+# and the name of the file or directorty.
+
+ls -lt /var/log
+# Order the files by its timestamp
+
+ls -ls /var/log
+# Order the files by its size
+
+ls -lsr /var/log
+# Order the files by its size, but in reverse
+
+ls -r /var/log
+# Order the files in reverse alphabetical order
