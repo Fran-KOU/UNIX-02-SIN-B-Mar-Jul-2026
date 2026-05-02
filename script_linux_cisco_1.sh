@@ -96,3 +96,25 @@ ls -l hello.sh
 ./hello.sh
 # Execute the content of the file
 
+cd Documents
+# Change the directory
+
+ls -l
+# drwxrwxrwx+ 3 codespace codespace 4096 May  2 22:43 School
+# -rwxrw-rw-  1 codespace codespace   23 May  2 23:18 hello.sh
+
+sudo chown root hello.sh
+
+# We change the owner of the "hello.sh" file to root
+
+ls -l
+# drwxrwxrwx+ 3 codespace codespace 4096 May  2 22:43 School
+# -rwxrw-rw-  1 root      codespace   23 May  2 23:18 hello.sh
+
+./hello.sh
+# Now we dont have enough permissions to execute this file, now we need "sudo" to execute
+
+sudo ./hello.sh
+# Works
+
+cat animals.txt
