@@ -75,3 +75,24 @@ sl
 sudo
 # Execute the next command as an admin
 
+cd Documents
+# Move to the Documents directory
+
+touch hello.sh
+# Creates a new file to change the permissions
+
+ls -l hello.sh
+# To list the permissions, this file has the read and write permissions
+
+./hello.sh
+# Shows error because this file doesnt have enough permissions
+
+chmod u+x hello.sh
+# Add the user permissions "u" and execution permissions "x"
+
+ls -l hello.sh
+# Now the permissions has been changed
+
+./hello.sh
+# Execute the content of the file
+
