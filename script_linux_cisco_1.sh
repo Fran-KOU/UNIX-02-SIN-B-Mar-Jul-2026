@@ -25,3 +25,7 @@ aptitude -v moo
 aptitude -vv moo
 aptitude -vvv moo
 # Easter egg commands that are not available on this version of linux
+
+pwd
+# Print the current folder, the "~" means the main directory of the user
+
