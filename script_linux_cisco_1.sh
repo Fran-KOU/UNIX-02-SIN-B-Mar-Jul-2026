@@ -65,3 +65,10 @@ ls -lsr /var/log
 
 ls -r /var/log
 # Order the files in reverse alphabetical order
+
+su -
+# Acts as a different user temporarily
+
+sl
+# Shows a train, only in the cisco VM
+
