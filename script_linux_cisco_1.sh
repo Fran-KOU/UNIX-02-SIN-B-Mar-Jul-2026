@@ -21,3 +21,7 @@ ls -r
 ls -lr
 # Combine the two formats, inverted order and on a vertical format
 
+aptitude -v moo
+aptitude -vv moo
+aptitude -vvv moo
+# Easter egg commands that are not available on this version of linux
