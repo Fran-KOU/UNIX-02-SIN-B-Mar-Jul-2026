@@ -11,3 +11,6 @@ ls Documents
 
 aptitude moo
 # It is a package management feature available in some versions of Linux
+
+ls -l
+# List the files with more information and on a vertical format
