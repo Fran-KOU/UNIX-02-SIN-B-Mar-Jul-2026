@@ -118,3 +118,23 @@ sudo ./hello.sh
 # Works
 
 cat animals.txt
+# Show the content of the file
+
+cat alpha.txt
+# Show the entire list
+
+head alpha.txt
+# Shows the first half of the content of the file
+
+tail alpha.txt
+# Shows the second half of the content of the text
+
+head -n 5 alpha.txt
+# Show the first 5 lines of the file
+
+tail -n 5 alpha.txt
+# Show the last 5 lines of the file
+
+cp /etc/passwd .
+# Copy the content of the file and paste in the main directory, "." is a shortcut of the current directory
+
