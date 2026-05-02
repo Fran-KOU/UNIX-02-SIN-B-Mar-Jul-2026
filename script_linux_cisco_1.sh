@@ -29,3 +29,5 @@ aptitude -vvv moo
 pwd
 # Print the current folder, the "~" means the main directory of the user
 
+mkdir Documents
+# We create a new directory for the exercises
