@@ -72,3 +72,6 @@ su -
 sl
 # Shows a train, only in the cisco VM
 
+sudo
+# Execute the next command as an admin
+
