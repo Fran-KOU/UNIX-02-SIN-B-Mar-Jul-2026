@@ -266,3 +266,10 @@ grep '[.]' profile.txt
 
 # Find the "." character, used to find literal characters
 
+# ===== Turn Off ===== 
+
+sudo shutdown
+# This command requires super user to work
+
+shutdown +1 "Goodbye World!"
+# We can add a message before the terminal shutdown
