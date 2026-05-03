@@ -292,3 +292,21 @@ ps -e
 
 ps -ef
 # Show all the process but detailed
+
+# ===== Package Managment =====
+
+sudo apt-get update
+# Update the list of available packages
+
+apt-cache search cow
+# To search for packages associated with the keyword cow
+
+sudo apt-get install cowsay
+# Once found, install the package
+
+sudo apt-get upgrade
+# To update all the packages and dependences
+
+sudo apt-get purge cowsay
+# To remove a package
+
