@@ -273,3 +273,12 @@ sudo shutdown
 
 shutdown +1 "Goodbye World!"
 # We can add a message before the terminal shutdown
+
+# ===== Network configuration =====
+
+ifconfig
+# Show the information of the network
+
+ping -c 4 192.168.1.2
+# Used to verify the connectivity among two devices
+
