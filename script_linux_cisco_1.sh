@@ -282,3 +282,13 @@ ifconfig
 ping -c 4 192.168.1.2
 # Used to verify the connectivity among two devices
 
+# ===== Process Visualization =====
+
+ps
+# Show the current proccess
+
+ps -e
+# Show all the process on the system
+
+ps -ef
+# Show all the process but detailed
