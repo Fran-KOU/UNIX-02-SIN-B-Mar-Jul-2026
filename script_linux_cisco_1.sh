@@ -138,3 +138,34 @@ tail -n 5 alpha.txt
 cp /etc/passwd .
 # Copy the content of the file and paste in the main directory, "." is a shortcut of the current directory
 
+dd if=/dev/zero of=/tmp/swapex bs=1M count=50
+# It will create a file named /tmp/swapex with 50 one-megabyte blocks of zeros.
+
+cd School/Art
+mv people.csv Work
+# This will move the file "people.csv" to the directory "Work"
+
+mv numbers.txt letters.txt alpha.txt School
+# To move various files, we write next to them the others and on the final of the command we write the destination
+
+touch linux.txt
+# Create a new file
+
+ls
+# School  alpha.txt  animals.txt  hello.sh  linux.txt
+
+rm linux.txt
+# This remove the file
+
+ls
+# School  alpha.txt  animals.txt  hello.sh
+
+mkdir directory
+# Create a directory
+
+rm directory
+# If we try to remove a directory it will show an error
+
+rm -r directory
+# Adding "-r" it will remove the directory for sure
+
