@@ -1,3 +1,5 @@
+# ====== List ======
+
 ls
 # List the files in the actual directory
 
@@ -20,6 +22,8 @@ aptitude -v moo
 aptitude -vv moo
 aptitude -vvv moo
 # Easter egg commands that are not available on this version of linux
+
+# ===== Directories =====
 
 pwd
 # Print the current folder, the "~" means the main directory of the user
@@ -50,6 +54,8 @@ cd ..
 cd ~
 # To move to the main directory
 
+# ===== Types of lists =====
+
 ls -l /var/log/
 # List the type of file, permissions, number of direct links, owner, group owner, size of the file, timestamp
 # and the name of the file or directorty.
@@ -66,6 +72,8 @@ ls -lsr /var/log
 ls -r /var/log
 # Order the files in reverse alphabetical order
 
+# ===== Super User =====
+
 su -
 # Acts as a different user temporarily
 
@@ -74,6 +82,8 @@ sl
 
 sudo
 # Execute the next command as an admin
+
+# ===== Changing Permissions =====
 
 cd Documents
 # Move to the Documents directory
@@ -96,6 +106,8 @@ ls -l hello.sh
 ./hello.sh
 # Execute the content of the file
 
+# ===== Changing Owner =====
+
 cd Documents
 # Change the directory
 
@@ -117,6 +129,8 @@ ls -l
 sudo ./hello.sh
 # Works
 
+# ===== Executing files =====
+
 cat animals.txt
 # Show the content of the file
 
@@ -135,11 +149,15 @@ head -n 5 alpha.txt
 tail -n 5 alpha.txt
 # Show the last 5 lines of the file
 
+# ===== Copy and paste =====
+
 cp /etc/passwd .
 # Copy the content of the file and paste in the main directory, "." is a shortcut of the current directory
 
 dd if=/dev/zero of=/tmp/swapex bs=1M count=50
 # It will create a file named /tmp/swapex with 50 one-megabyte blocks of zeros.
+
+# ===== Moving Files =====
 
 cd School/Art
 mv people.csv Work
@@ -147,6 +165,8 @@ mv people.csv Work
 
 mv numbers.txt letters.txt alpha.txt School
 # To move various files, we write next to them the others and on the final of the command we write the destination
+
+# ===== Removing Files and directories =====
 
 touch linux.txt
 # Create a new file
@@ -168,4 +188,81 @@ rm directory
 
 rm -r directory
 # Adding "-r" it will remove the directory for sure
+
+# ===== Entrance filters =====
+
+grep sysadmin passwd  
+# It can be used to filter and obtain information about a specific user or localice words (On this codespaces doesnt work
+# but in the VM of CISCO it does.)
+
+# sysadmin:x:1001:1001:System Administrator,,,,:/home/sysadmin:/bin/bash 
+# This is the result of the command.
+
+# ===== Basic patterns =====
+
+sysadmin@localhost:~/Documents$ grep 'root' passwd
+# root:x:0:0:root:/root:/bin/bash                                                 
+# operator:x:1000:37::/root:
+
+# The root pattern appears many times in the /etc/passwd file
+
+sysadmin@localhost:~/Documents$ grep '^root' /etc/passwd
+# root:x:0:0:root:/root:/bin/bash
+
+# The first anchor character ^ is used to indicate that the pattern should appear 
+# at the beginning of the line.
+
+sysadmin@localhost:~/Documents$ grep 'r$' alpha-first.txt
+# B is for Bear
+# F is for Flower
+
+# The second anchor character $ can be used to indicate that the pattern should 
+# appear at the end of the line.
+
+sysadmin@localhost:~/Documents$ grep 'r..f' red.txt
+# reef
+# roof
+
+# The ".." means to search words that begins with "r" and exactly two spaces away are an "f"
+
+sysadmin@localhost:~/Documents$ grep 'r..d' red.txt
+# reed
+# read
+
+# Same here
+
+sysadmin@localhost:~/Documents$ grep '....' red.txt                             
+# reef
+# reeed
+# roof                                                                            
+# reed
+# root
+# reel
+# read
+
+# Its also used to find words with an specific letter large, in this case it find words with at least 4 letters
+
+grep '[0-9]' profile.txt
+# I am 37 years old.
+# 3121991
+# I have 2 dogs.
+# 123456789101112
+
+# Highlight the numbers
+
+grep '[^0-9]' profile.txt
+# I am 37 years old.
+# 3121991
+# I have 2 dogs.
+# 123456789101112
+
+# Used to fin non-numerical characters
+
+grep '[.]' profile.txt
+# Hello my name is Joe.
+# I am 37 years old.
+# My favorite food is avocados.
+# I have 2 dogs.
+
+# Find the "." character, used to find literal characters
 
