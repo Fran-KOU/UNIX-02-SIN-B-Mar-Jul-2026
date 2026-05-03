@@ -310,3 +310,13 @@ sudo apt-get upgrade
 sudo apt-get purge cowsay
 # To remove a package
 
+# ===== Passwords =====
+
+passwd
+# Used to change the password
+
+passwd -S sysadmin 
+# Used to view information about the password of the user
+
+sudo passwd sysadmin
+# Used to change the password of other users
