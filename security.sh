@@ -25,3 +25,8 @@ id -G
 cat /etc/group | grep video
 # Display the id of an specific group
 
+mkdir ~/proyecto_unix/
+# Creates a new folder on my main directory
+
+ls -la ~/proyecto_unix/
+# List the detailed content of the new folder
