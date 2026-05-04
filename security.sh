@@ -12,3 +12,16 @@ groups
 
 groups $USER
 # Displays the security groups that the user belongs to
+
+id -u
+# Display the ID of the user
+
+id -g
+# Display the main ID of the group
+
+id -G
+# Display all the ID groups
+
+cat /etc/group | grep video
+# Display the id of an specific group
+
