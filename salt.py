@@ -2,8 +2,8 @@ import crypt
 password = 'micontraseña123'
 salt1 = crypt.mksalt(crypt.METHOD_SHA512)
 salt2 = crypt.mksalt(crypt.METHOD_SHA512)
-has1 = crypt.crypt(password, salt1)
-has2 = crypt.crypt(password, salt2)
+hash1 = crypt.crypt(password, salt1)
+hash2 = crypt.crypt(password, salt2)
 print('Salt 1:', salt1)
 print('Hash 1:', hash1[:50])
 print()
