@@ -97,7 +97,7 @@ usermod -G desarrolladores root
 
 id root
 
-# PReparar el escenario de práctica
+# Prepare the practice scenary
 
 mkdir -p ~/lab_chgrp/{proyectos,reportes,scripts}
 
@@ -108,3 +108,15 @@ touch ~/lab_chgrp/proyectos/config.json
 touch ~/lab_chgrp/reportes/informes.txt
 
 touch ~/lab_chgrp/scripts/deploy.sh
+
+# View the initial state
+
+ls -la ~/lab_chgrp/proyectos/
+
+ls -la ~/lab_chgrp/reportes/
+
+# Change the ggroup of a file
+
+chgrp desarrolladores ~/lab_chgrp/proyectos/app.py
+
+ls -la ~/lab_chgrp/proyectos/
