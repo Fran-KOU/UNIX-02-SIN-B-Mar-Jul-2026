@@ -96,3 +96,15 @@ usermod -G desarrolladores root
 # This erase all te secondary groups except of the group "desarrolladores"
 
 id root
+
+# PReparar el escenario de práctica
+
+mkdir -p ~/lab_chgrp/{proyectos,reportes,scripts}
+
+touch ~/lab_chgrp/proyectos/app.py
+
+touch ~/lab_chgrp/proyectos/config.json
+
+touch ~/lab_chgrp/reportes/informes.txt
+
+touch ~/lab_chgrp/scripts/deploy.sh
