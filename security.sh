@@ -30,3 +30,21 @@ mkdir ~/proyecto_unix/
 
 ls -la ~/proyecto_unix/
 # List the detailed content of the new folder
+
+groupadd desarrolladores
+# Create a simple group
+
+groupadd -g 2000 operaciones
+# Specific GID, system group (GID < 1000)
+
+groupadd --system servicios_web
+
+grep "desarrolladores\|operaciones\|servicios_web" /etc/group
+# Verify that the groups has been created
+
+# desarrolladores:x:1000:
+# operaciones:x:2000:
+# servicios_web:x:995:
+
+groupadd --help
+# View main options
