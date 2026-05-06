@@ -48,3 +48,51 @@ grep "desarrolladores\|operaciones\|servicios_web" /etc/group
 
 groupadd --help
 # View main options
+
+grep "GID_MIN\|GID_MAX\|SYS_GID" /etc/login.defs
+# The groups that has the GID system minor to maximum of the user
+# On ubuntu typically:
+# SYS_GID_MIN = 100
+# SYS_GYD_MAX = 999
+# GID_MIN = 1 000
+# GID_MAX = 60 000
+
+# Create groups with "addgroup"
+addgroup diseno
+
+addgroup --gid 2100 marketing
+
+addgroup --system cache_web
+
+grep "diseno\|marketing\|cache_web" /etc/group
+# Verify
+
+usermod -aG desarrolladores $USER
+# Change $USER to root
+
+usermod -aG diseno $USER
+# Change $USER to root as well
+
+grep "desarrolladores\|diseno" /etc/group
+
+adduser $USER marketing
+# Add the uset to a group with adduser
+
+id $USER
+
+grep $USER /etc/group
+
+# Create a temporal group
+
+groupadd grupo_temporal
+
+usermod -aG grupo_temporal root
+
+id root
+
+# Now the ERROR: usermod without -a
+
+usermod -G desarrolladores root
+# This erase all te secondary groups except of the group "desarrolladores"
+
+id root
