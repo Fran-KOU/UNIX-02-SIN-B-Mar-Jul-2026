@@ -120,3 +120,19 @@ ls -la ~/lab_chgrp/reportes/
 chgrp desarrolladores ~/lab_chgrp/proyectos/app.py
 
 ls -la ~/lab_chgrp/proyectos/
+
+# Change group of multiple files
+
+chgrp diseno \ 
+~/lab_chgrp/proyectos/config.json \ 
+~/lab_chgrp/reportes/informe.txt
+
+ls -la ~/lab_chgrp/proyectos/
+
+ls -la
+
+chgrp -R desarrolladores ~/lab_chgrp/scripts/
+
+ls -laR ~/lab_chgrp/scripts/
+
+chgrp -Rv diseno ~/lab_chgrp/reportes
