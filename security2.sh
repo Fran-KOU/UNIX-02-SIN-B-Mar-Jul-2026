@@ -44,3 +44,18 @@ ls -la ~/dentro_de_newgrp.txt
 
 mkdir -p ~/proyecto_dev/src
 
+# proyecto_dev/ have the group 'desarrolladores'
+
+# Exit from subshell from newgrp
+
+exit
+
+# Verify that we came back to the main group
+
+id -gn
+
+echo "Grupo restaurado: $(id -gn)"
+
+# Compare both files
+
+ls -la ~/antes_de_newgrp.txt ~/dentro_de_newgrp.txt
