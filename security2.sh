@@ -59,3 +59,17 @@ echo "Grupo restaurado: $(id -gn)"
 # Compare both files
 
 ls -la ~/antes_de_newgrp.txt ~/dentro_de_newgrp.txt
+
+# newgrp creates a subshell
+
+echo "PID del shell actual: $$"
+
+newgrp desarrolladores
+
+echo "PID dentro de newgrp: $$" # The PID is different
+
+# Create a group with a password
+
+groupadd grupo_restringido
+
+gpasswd grupo_restringido
