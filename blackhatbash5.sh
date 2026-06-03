@@ -34,4 +34,11 @@ cat stdout.txt && stderr.txt
 lzl 2> error.txt
 cat error.txt
 
+cat < error.txt
+
+cat << EOF
+    Black Hat Bash
+    by No starch Press
+EOF
+
 set +x
