@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -x
+
 book="black hat bash"
 
 echo "This book's name is ${book}"
@@ -15,3 +17,5 @@ book="Black Hat Bash"
 unset book
 
 echo "${book}"
+
+set +x
