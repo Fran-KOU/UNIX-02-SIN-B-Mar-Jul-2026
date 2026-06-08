@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
-set -x
-
 # bash --version
 
 env
@@ -36,4 +34,3 @@ chmod u+x blackhatbash1.sh
 
 # bash -x blackhatbash1.sh
 
-set +x

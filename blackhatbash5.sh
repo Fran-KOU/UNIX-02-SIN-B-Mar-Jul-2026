@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-set -x
-
 touch test && touch test123
 
 (ls;ps)
@@ -40,5 +38,3 @@ cat << EOF
     Black Hat Bash
     by No starch Press
 EOF
-
-set +x
