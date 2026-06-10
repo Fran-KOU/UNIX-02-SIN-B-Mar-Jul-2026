@@ -296,6 +296,15 @@ SHELL ["/bin/bash", "-c"]
 # terminales se abran cerca de nuestros archivos del curso.
 WORKDIR /workspaces
 
+# ============= #
+#  Section i    #
+# ============= #
+
+# By integrating with cloud services such as GitHub Codespaces, setting this to /workspaces ensures that fresh terminal sessions open right where our repository files are stored.
+# Within the virtual filesystem layout of the container, workdir sets the absolute path and active execution context (BHB Ch. 1).
+
+
+
 # Configuración de Git para el contenedor:
 # - safe.directory *: confía en cualquier repo montado (necesario porque
 #   /workspaces/... tiene un UID distinto al de root dentro del container).
