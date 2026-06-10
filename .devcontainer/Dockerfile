@@ -207,8 +207,39 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     httpie \
     \
 
+# ============= #
+#  Section e    #
+# ============= #
 
-    
+# Install vs. apt-get update: update only retrieves the most recent list of software versions that are available from the repository. Install is responsible for downloading and setting up the software on the computer.
+
+# -y: During installation, it automatically responds "yes" to any interactive questions. Docker builds require this in order to function without human intervention.
+# --no-install-recommends instructs the package management to ignore "recommended" additional packages and only install absolute dependencies. Your container remains lightweight as a result.
+
+# Why ONE large RUN: Each RUN command in a Dockerfile adds a new, long-lasting "layer" to the image. By chaining operations together, the final image size is kept significantly smaller by prev0enting temporary files or caches from being permanently baked into intermediate layers.
+
+# "AND" is represented by the shell operator &&. It instructs the system to carry out the subsequent instruction only in the event that the preceding command is successful and error-free.
+
+# Trailing \: A character that continues a line. It enables you to format a single, large command into a clear, readable vertical list by informing the shell that the command continues on the following line.
+
+# gawk: A robust text processing program (GNU Awk) for extracting and modifying data columns from outputs or text files.
+
+# Sed is a stream editor that can be used to carry out simple text changes on an input stream, such as automating file "search and replace" procedures.
+
+# grep: A command-line tool for looking for particular string patterns or regular expressions in text or files.
+
+# shellcheck: A static analysis tool that looks for probable problems, bad practices, and syntax issues in your shell scripts.
+
+# Security experts and administrators use nmap, a network mapping program, to find devices, open ports, and vulnerabilities on a network.
+
+# Network packet analyzers include tcpdump and tshark. They record and show real-time data packets moving across a network (TShark is Wireshark's command-line counterpart).
+
+# Proxychains4: Tools for routing and privacy. While proxychains4 compels each specific application's network traffic to flow via proxy servers (like Tor), tor directs traffic through the anonymous Tor network.
+
+# jq: A small, command-line utility designed especially for parsing, filtering, and formatting JSON data.
+
+# The built-in manual/documentation pages for other Linux commands can be read using man-db, the database and tools that support the man command.
+
  # --- Después de instalar, activamos el idioma español ---
  # sed busca "# es_ES.UTF-8" en /etc/locale.gen y le quita el "#" para
  # activar esa línea. Luego locale-gen compila los archivos de idioma.
