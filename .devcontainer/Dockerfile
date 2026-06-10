@@ -246,6 +246,16 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
  && sed -i 's/# es_ES.UTF-8/es_ES.UTF-8/' /etc/locale.gen \
  && locale-gen \
  \
+
+# ============= #
+#  Section f    #
+# ============= #
+
+# This step uncomments and enables the Spanish UTF-8 layout string, which is then compiled by 'locale-gen' to guarantee correct native character support across terminal tools. 
+# It uses 'sed -i' to perform in-place stream editing to modify the localization configuration file without creating duplicates (BHB Ch. 2).
+
+
+
  # --- Limpieza final: reducir el tamaño de la imagen ---
  # apt deja archivos de caché que ya no necesitamos después de instalar.
  # Borrarlos aquí (en el mismo RUN) hace la capa final más pequeña.
