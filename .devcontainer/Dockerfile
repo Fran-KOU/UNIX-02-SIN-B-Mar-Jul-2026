@@ -71,6 +71,17 @@ ENV DEBIAN_FRONTEND=noninteractive \
     LC_ALL=es_ES.UTF-8 \
     TERM=xterm-256color
 
+# ============= #
+#  Section c    #
+# ============= #
+
+# According to BHB Chapter 1, ENV specifies permanent environment variables that are active during the image creation 
+# and container runtime sessions.To avoid headless build freezes, DEBIAN_FRONTEND=noninteractive suppresses interactive 
+# package installer dialogs. #LANG & LC_ALL=es_ES.UTF-8 adjusts the system localization and character encoding standard to 
+# correctly render Spanish character sets.TERM=xterm-256color: Notifies terminal programs that full syntax highlighting is possible 
+# with a 256-color palette.
+
+
 
 # ----------------------------------------------------------------------------
 # Pre-respuesta a una pregunta interactiva de Wireshark
@@ -81,7 +92,6 @@ ENV DEBIAN_FRONTEND=noninteractive \
 # debconf-set-selections para que no detenga el build esperando input.
 RUN echo "wireshark-common wireshark-common/install-setuid boolean false" \
     | debconf-set-selections
-
 
 # ----------------------------------------------------------------------------
 # RUN: ejecutar comandos durante la construcción de la imagen
