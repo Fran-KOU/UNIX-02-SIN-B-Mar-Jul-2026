@@ -339,6 +339,15 @@ RUN git config --system --add safe.directory '*' \
 # para que chsh ya no haga falta y todo sea consistente.
 RUN chsh -s /usr/bin/zsh root
 
+# ============= #
+#  Section k    #
+# ============= #
+
+# The default interactive login shell for a particular system user account can be changed using the 'chsh' (change shell) command. 
+# The default command-line execution surface is updated to the Z shell by targeting the root user and pointing to '/usr/bin/zsh'. 
+# This standardizes the workspace interface to reflect contemporary Kali Linux native setups (BHB Ch. 1).
+
+
 # Prompt del curso para bash
 RUN cat >> /root/.zshrc <<'EOF'
 
