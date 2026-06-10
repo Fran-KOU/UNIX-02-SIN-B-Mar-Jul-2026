@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-while True; do
+while true; do
  echo "Looping..."
  sleep 2
 done
+
