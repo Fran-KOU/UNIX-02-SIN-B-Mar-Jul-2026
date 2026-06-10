@@ -263,6 +263,13 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
+# ============= #
+#  Section g    #
+# ============= #
+
+# Cached installer files are purged by running 'apt-get clean' and using 'rm -rf' to remove temporary metadata directories (BHB Ch. 3). 
+# Conducting this operational cleanup within the same run block ensures that temporary files are removed before Docker commits and freezes the filesystem layer, thereby preventing image bloat.
+
 
 # ----------------------------------------------------------------------------
 # SHELL: qué intérprete usar en los siguientes RUN
@@ -271,7 +278,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # cambiamos a bash por si agregamos más instrucciones con sintaxis
 # moderna (arrays, [[ ]], etc.).
 SHELL ["/bin/bash", "-c"]
-
 
 # ----------------------------------------------------------------------------
 # WORKDIR: directorio de trabajo al entrar al contenedor
