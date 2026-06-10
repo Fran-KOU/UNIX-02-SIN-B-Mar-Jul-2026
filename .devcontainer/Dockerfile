@@ -30,7 +30,7 @@ FROM kalilinux/kali-rolling:latest
 # ============= #
 
 # The basic, read-only operating system snapshot that acts as our container's first filesystem blueprint is called a base 
-# image (Farhi & Aleks, s. f.) 
+# image (BHB Ch. 3). 
 # Because Kali Linux is an industry-standard distribution that comes pre-configured with sophisticated network auditing libraries, 
 # we specifically chose it to avoid having to manually compile crucial UNIX utilities from scratch.
 
@@ -62,7 +62,7 @@ FROM kalilinux/kali-rolling:latest
 #  Section b    #
 # ============= #
 
-# A read-only layered architecture is used to create docker images, with each instruction creating a new filesystem layer (Farhi & Aleks, s. f.) 
+# A read-only layered architecture is used to create docker images, with each instruction creating a new filesystem layer (BHB Ch. 3). 
 # Docker caches these layers in order to maximize performance; if an instruction is changed, its cache and all levels that follow are invalidated. 
 # In order to avoid sluggish, redundant rebuilds, hefty, static setup procedures must be positioned at the top of the instruction list.
 
@@ -75,7 +75,7 @@ ENV DEBIAN_FRONTEND=noninteractive \
 #  Section c    #
 # ============= #
 
-# According to (Farhi & Aleks, s. f.), ENV specifies permanent environment variables that are active during the image creation 
+# According to BHB Chapter 1, ENV specifies permanent environment variables that are active during the image creation 
 # and container runtime sessions.To avoid headless build freezes, DEBIAN_FRONTEND=noninteractive suppresses interactive 
 # package installer dialogs. #LANG & LC_ALL=es_ES.UTF-8 adjusts the system localization and character encoding standard to 
 # correctly render Spanish character sets.TERM=xterm-256color: Notifies terminal programs that full syntax highlighting is possible 
@@ -97,9 +97,9 @@ RUN echo "wireshark-common wireshark-common/install-setuid boolean false" \
 #  Section d    #
 # ============= #
 
-# The pipeline operator (|) reroutes the echo command's standard output (stdout) into the debconf-set-selections standard input (stdin) (Farhi & Aleks, s. f.) 
+# The pipeline operator (|) reroutes the echo command's standard output (stdout) into the debconf-set-selections standard input (stdin) (BHB Ch. 1). 
 # In order to guarantee a fully automated, noninteractive build without freezing, this pre-seeds the Wireshark package's 
-# configuration by responding to its interactive prompt beforehand (Farhi & Aleks, s. f.)
+# configuration by responding to its interactive prompt beforehand (BHB Ch. 3).
 
 
 
@@ -252,7 +252,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # ============= #
 
 # This step uncomments and enables the Spanish UTF-8 layout string, which is then compiled by 'locale-gen' to guarantee correct native character support across terminal tools. 
-# It uses 'sed -i' to perform in-place stream editing to modify the localization configuration file without creating duplicates (Farhi & Aleks, s. f.)
+# It uses 'sed -i' to perform in-place stream editing to modify the localization configuration file without creating duplicates (BHB Ch. 2).
 
 
 
@@ -267,7 +267,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 #  Section g    #
 # ============= #
 
-# Cached installer files are purged by running 'apt-get clean' and using 'rm -rf' to remove temporary metadata directories (Farhi & Aleks, s. f.)
+# Cached installer files are purged by running 'apt-get clean' and using 'rm -rf' to remove temporary metadata directories (BHB Ch. 3). 
 # Conducting this operational cleanup within the same run block ensures that temporary files are removed before Docker commits and freezes the filesystem layer, thereby preventing image bloat.
 
 
@@ -285,7 +285,7 @@ SHELL ["/bin/bash", "-c"]
 
 # The shell command enforces a full Bash environment (“/bin/bash", "-c]) for following run steps by overriding the default system interpreter (/bin/sh). 
 # This guarantees that sophisticated script features like arrays, intricate string expansions, and contemporary conditional logic parse consistently 
-# rather than relying on constrictive POSIX shell constraints (Farhi & Aleks, s. f.)
+# rather than relying on constrictive POSIX shell constraints (BHB Ch. 1).
 
 
 # ----------------------------------------------------------------------------
@@ -301,7 +301,7 @@ WORKDIR /workspaces
 # ============= #
 
 # By integrating with cloud services such as GitHub Codespaces, setting this to /workspaces ensures that fresh terminal sessions open right where our repository files are stored.
-# Within the virtual filesystem layout of the container, workdir sets the absolute path and active execution context (Farhi & Aleks, s. f.)
+# Within the virtual filesystem layout of the container, workdir sets the absolute path and active execution context (BHB Ch. 1).
 
 
 
@@ -345,7 +345,7 @@ RUN chsh -s /usr/bin/zsh root
 
 # The default interactive login shell for a particular system user account can be changed using the 'chsh' (change shell) command. 
 # The default command-line execution surface is updated to the Z shell by targeting the root user and pointing to '/usr/bin/zsh'. 
-# This standardizes the workspace interface to reflect contemporary Kali Linux native setups (Farhi & Aleks, s. f.)
+# This standardizes the workspace interface to reflect contemporary Kali Linux native setups (BHB Ch. 1).
 
 
 # Prompt del curso para bash
@@ -359,7 +359,7 @@ EOF
 #  Section l    #
 # ============= #
 
-# An advanced stream redirection technique called Here-Document (<<'EOF') injects multi-line text blocks straight into files without the need for interactive text editors (Farhi & Aleks, s. f.)
+# An advanced stream redirection technique called Here-Document (<<'EOF') injects multi-line text blocks straight into files without the need for interactive text editors (BHB Ch. 1).
 # By stopping the build shell from prematurely extending variables, single quotes surrounding the 'EOF' delimiter guarantee literal string appending. 
 # In order to rapidly track and provide execution exit status codes via visual metrics, the PROMPT configuration modifies the interactive Zsh workspace interface by incorporating a personal identifying signature, the current working directory path (%1~), 
 # and a dynamic ternary conditional check. 
@@ -373,4 +373,4 @@ CMD ["/bin/zsh"]
 
 # When the container instantiates at runtime, the default execution command is specified by CMD. 
 # CMD designates the persistent runtime entrypoint and initiates an interactive Z shell session upon startup, in contrast to build-time RUN instructions 
-# that carry out actions to permanently modify and compile static filesystem layers (Farhi & Aleks, s. f.)
+# that carry out actions to permanently modify and compile static filesystem layers (BHB Ch. 3).
