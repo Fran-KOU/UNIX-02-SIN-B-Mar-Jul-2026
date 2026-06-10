@@ -279,6 +279,15 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # moderna (arrays, [[ ]], etc.).
 SHELL ["/bin/bash", "-c"]
 
+# ============= #
+#  Section h    #
+# ============= #
+
+# The shell command enforces a full Bash environment (“/bin/bash", "-c]) for following run steps by overriding the default system interpreter (/bin/sh). 
+# This guarantees that sophisticated script features like arrays, intricate string expansions, and contemporary conditional logic parse consistently 
+# rather than relying on constrictive POSIX shell constraints (BHB Ch. 1).
+
+
 # ----------------------------------------------------------------------------
 # WORKDIR: directorio de trabajo al entrar al contenedor
 # ----------------------------------------------------------------------------
