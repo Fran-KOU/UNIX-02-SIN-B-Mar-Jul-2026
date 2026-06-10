@@ -93,6 +93,16 @@ ENV DEBIAN_FRONTEND=noninteractive \
 RUN echo "wireshark-common wireshark-common/install-setuid boolean false" \
     | debconf-set-selections
 
+# ============= #
+#  Section d    #
+# ============= #
+
+# The pipeline operator (|) reroutes the echo command's standard output (stdout) into the debconf-set-selections standard input (stdin) (BHB Ch. 1). 
+# In order to guarantee a fully automated, noninteractive build without freezing, this pre-seeds the Wireshark package's 
+# configuration by responding to its interactive prompt beforehand (BHB Ch. 3).
+
+
+
 # ----------------------------------------------------------------------------
 # RUN: ejecutar comandos durante la construcción de la imagen
 # ----------------------------------------------------------------------------
@@ -196,6 +206,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     # === Cliente HTTP más legible que curl para aprender ===
     httpie \
     \
+
+
+    
  # --- Después de instalar, activamos el idioma español ---
  # sed busca "# es_ES.UTF-8" en /etc/locale.gen y le quita el "#" para
  # activar esa línea. Luego locale-gen compila los archivos de idioma.
