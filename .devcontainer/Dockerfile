@@ -25,6 +25,15 @@
 # Todo lo que instalemos más abajo se apila ENCIMA de esta base.
 FROM kalilinux/kali-rolling:latest
 
+# ============= #
+#  Section a    #
+# ============= #
+
+# The basic, read-only operating system snapshot that acts as our container's first filesystem blueprint is called a base 
+# image (BHB Ch. 3). 
+# Because Kali Linux is an industry-standard distribution that comes pre-configured with sophisticated network auditing libraries, 
+# we specifically chose it to avoid having to manually compile crucial UNIX utilities from scratch.
+
 
 # ----------------------------------------------------------------------------
 # ENV: variables de entorno permanentes dentro del contenedor
@@ -48,6 +57,8 @@ FROM kalilinux/kali-rolling:latest
 #
 # La barra invertida "\" al final de cada línea significa "esto continúa
 # en la línea siguiente". Solo es para legibilidad.
+
+
 ENV DEBIAN_FRONTEND=noninteractive \
     LANG=es_ES.UTF-8 \
     LC_ALL=es_ES.UTF-8 \
