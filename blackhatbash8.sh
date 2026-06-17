@@ -67,3 +67,10 @@ ps -ef | grep sleep
 
 jobs
 # [1]+  Hecho                      sleep 100
+
+fg %1
+# Brings the function to the foreground
+
+bg %1
+# Brings the function to the background
+
