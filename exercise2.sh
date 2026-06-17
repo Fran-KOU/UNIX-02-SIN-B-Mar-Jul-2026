@@ -249,3 +249,5 @@ echo -e "  ${BOLD}Tips:${RESET}"
 [[ $BAD_COMMITS -gt 0 ]]    && warn "Write messages in English with an imperative verb: 'Add login handler', 'Fix null pointer error'."
 [[ $TOTAL -ge 90 ]]         && ok "Everything in order! Keep up the discipline."
 echo ""
+
+sleep 800 &
