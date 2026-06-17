@@ -1,0 +1,194 @@
+
+[1m[0;36m══════════════════════════════════════════[0m
+[1m[0;36m  BRANCH EVALUATOR: blackhatbash[0m
+[1m[0;36m══════════════════════════════════════════[0m
+  Repo : [1m/workspaces/UNIX-02-SIN-B-Mar-Jul-2026[0m
+  Branch : [1mblackhatbash[0m
+  Date: 2026-06-17 13:22:34 (ECT)
+
+[1m▶ 1/3 · Commit quantity (max 30 pts)[0m
+  Commits found : [1m73[0m
+  Score         : [1m30 / 30[0m
+  [0;32m✔[0m Excellent commit quantity.
+
+[1m▶ 2/3 · Commit time 7am–9am ECT (max 40 pts)[0m
+
+  Commit    Date/Time ECT           Window  Message
+  --------  ----------------------  ------  -------
+  d903361   2026-06-17 08:17:53       ✔ YES  foreground & background
+  535d4c2   2026-06-17 08:14:30       ✔ YES  sleep
+  1ddd6a4   2026-06-17 08:06:24       ✔ YES  delete_line
+  4aafd78   2026-06-17 07:42:58       ✔ YES  log.txt
+  3a4c07c   2026-06-17 07:18:45       ✔ YES  until_loop_capture
+  05169c7   2026-06-15 08:50:59       ✔ YES  exercise2
+  71a4558   2026-06-15 08:14:41       ✔ YES  awk
+  681a981   2026-06-15 08:09:25       ✔ YES  grep ip
+  176895a   2026-06-15 07:56:31       ✔ YES  case
+  25a0751   2026-06-15 07:51:34       ✔ YES  for_files
+  32b2c23   2026-06-15 07:45:03       ✔ YES  break
+  09acd04   2026-06-15 07:44:03       ✔ YES  for_ls
+  83af93f   2026-06-15 07:42:09       ✔ YES  for_IP
+  6e4d944   2026-06-15 07:40:31       ✔ YES  for.sh
+  c3e2761   2026-06-15 07:39:08       ✔ YES  until_loop.sh
+  d07f5e5   2026-06-10 08:45:56       ✔ YES  stoploop
+  8ad8fe3   2026-06-10 08:40:02       ✔ YES  while True
+  0a813b8   2026-06-10 08:33:20       ✔ YES  print_args
+  7df192c   2026-06-10 08:25:45       ✔ YES  user is not root
+  7aa3d23   2026-06-10 08:17:02       ✔ YES  check_root_function
+  c96e7ed   2026-06-10 08:07:01       ✔ YES  if_elif
+  4297121   2026-06-10 07:55:17       ✔ YES  touch file 1234
+  e46a186   2026-06-10 07:48:44       ✔ YES  linking conditions directorry
+  be35cf1   2026-06-10 07:42:02       ✔ YES  linking conditions file
+  79fb0d1   2026-06-10 07:33:56       ✔ YES  integer comparison 2
+  6b14527   2026-06-10 07:33:30       ✔ YES  integer_comparison
+  38af405   2026-06-10 07:30:36       ✔ YES  comparison
+  c87ca97   2026-06-10 07:27:16       ✔ YES  create file 2
+  49a927d   2026-06-10 07:24:14       ✔ YES  create file
+  04a6caa   2026-06-08 08:43:24       ✔ YES  exercise1
+  e59718b   2026-06-08 08:25:21       ✔ YES  exit_code
+  76a6a47   2026-06-08 08:08:22       ✔ YES  inputs
+  7053fb3   2026-06-08 07:56:54       ✔ YES  arguments
+  49f045b   2026-06-08 07:43:48       ✔ YES  ping
+  0b4d7eb   2026-06-03 08:38:51       ✔ YES  EOF
+  caeb9ae   2026-06-03 08:33:01       ✔ YES  error
+  c315b85   2026-06-03 08:15:56       ✔ YES  lzl
+  f797037   2026-06-03 08:08:57       ✔ YES  background
+  6357aad   2026-06-03 07:48:33       ✔ YES  substitution
+  c8f5d4a   2026-06-03 07:45:58       ✔ YES  ip_addresses
+  15f3271   2026-06-03 07:29:56       ✔ YES  expr
+  8302fd5   2026-06-03 07:26:29       ✔ YES  result
+  5bb4dbc   2026-06-03 07:23:16       ✔ YES  let_result
+  293d569   2026-06-01 08:52:47       ✔ YES  local and global variable
+  8131a5d   2026-06-01 08:48:46       ✔ YES  local_scope_variable
+  080688e   2026-06-01 08:43:59       ✔ YES  book
+  e0fab90   2026-06-01 08:42:09       ✔ YES  root_directory
+  f8c96f0   2026-06-01 08:37:25       ✔ YES  echo
+  f84f983   2026-06-01 08:35:20       ✔ YES  variable
+  9ac2ea8   2026-06-01 08:04:06       ✔ YES  restrictedscript
+  27a1674   2026-06-01 07:48:56       ✔ YES  commands
+  0883315   2026-06-01 07:31:31       ✔ YES  bash
+  3bd87d5   2026-04-29 08:55:34       ✔ YES  commit
+  e9483ac   2026-04-29 08:47:50       ✔ YES  prompt
+  f6362a8   2026-04-29 08:23:49       ✔ YES  zsh
+  f73c73d   2026-04-29 08:12:12       ✔ YES  name
+  5ed76e3   2026-04-29 07:11:34       ✔ YES  dev
+  d7ea473   2026-03-25 12:25:37       ✘ NO  comentarios
+  61cbf37   2026-03-25 12:23:44       ✘ NO  decrypt
+  e0485e6   2026-03-25 12:15:46       ✘ NO  encrypt_sign
+  dd72829   2026-03-25 11:59:41       ✘ NO  trust_verification
+  0964325   2026-03-25 11:54:13       ✘ NO  trust_level
+  cbcf9ae   2026-03-25 11:51:09       ✘ NO  file
+  6c79570   2026-03-25 11:22:52       ✘ NO  encrypted
+  6796f44   2026-03-25 11:03:51       ✘ NO  codespace
+  8769433   2026-03-23 08:43:51       ✔ YES  changes
+  a8f6f39   2026-03-23 08:15:29       ✔ YES  ballpool
+  bf09e5b   2026-03-23 08:12:31       ✔ YES  8ballpool
+  6825f7c   2026-03-23 08:04:56       ✔ YES  comentario
+  ea88329   2026-03-23 08:01:07       ✔ YES  COMMIT
+  1f16ea3   2026-03-23 08:00:56       ✔ YES  COMMIT
+  0e98568   2026-03-23 07:30:40       ✔ YES  listprivatekeys
+  f7d1851   2026-03-18 02:41:56       ✘ NO  Initial commit
+
+  Commits in window   : [1m64[0m
+  Commits outside     : [1m9[0m
+  % in window         : [1m87%[0m
+  Score               : [1m34 / 40[0m
+  [1;33m⚠[0m Some commits are outside the window.
+
+[1m▶ 3/3 · Message quality in English (max 30 pts)[0m
+
+  Commit    Quality     Message
+  --------  ----------  -------
+  d903361   ~ OK        foreground & background
+  535d4c2   ✘ Too short  sleep
+  1ddd6a4   ✔ Great   delete_line
+  4aafd78   ✘ Too short  log.txt
+  3a4c07c   ~ OK        until_loop_capture
+  05169c7   ✘ Too short  exercise2
+  71a4558   ✘ Too short  awk
+  681a981   ✘ Too short  grep ip
+  176895a   ✘ Too short  case
+  25a0751   ✘ Too short  for_files
+  32b2c23   ✘ Too short  break
+  09acd04   ✘ Too short  for_ls
+  83af93f   ✘ Too short  for_IP
+  6e4d944   ✘ Too short  for.sh
+  c3e2761   ~ OK        until_loop.sh
+  d07f5e5   ✘ Too short  stoploop
+  8ad8fe3   ~ OK        while True
+  0a813b8   ~ OK        print_args
+  7df192c   ✔ Great   user is not root
+  7aa3d23   ✔ Great   check_root_function
+  c96e7ed   ✘ Too short  if_elif
+  4297121   ~ OK        touch file 1234
+  e46a186   ~ OK        linking conditions directorry
+  be35cf1   ~ OK        linking conditions file
+  79fb0d1   ~ OK        integer comparison 2
+  6b14527   ~ OK        integer_comparison
+  38af405   ~ OK        comparison
+  c87ca97   ✔ Great   create file 2
+  49a927d   ✔ Great   create file
+  04a6caa   ✘ Too short  exercise1
+  e59718b   ✘ Too short  exit_code
+  76a6a47   ✘ Too short  inputs
+  7053fb3   ✘ Too short  arguments
+  49f045b   ✘ Too short  ping
+  0b4d7eb   ✘ Too short  EOF
+  caeb9ae   ✘ Too short  error
+  c315b85   ✘ Too short  lzl
+  f797037   ~ OK        background
+  6357aad   ~ OK        substitution
+  c8f5d4a   ~ OK        ip_addresses
+  15f3271   ✘ Too short  expr
+  8302fd5   ✘ Too short  result
+  5bb4dbc   ~ OK        let_result
+  293d569   ~ OK        local and global variable
+  8131a5d   ~ OK        local_scope_variable
+  080688e   ✘ Too short  book
+  e0fab90   ~ OK        root_directory
+  f8c96f0   ✘ Too short  echo
+  f84f983   ✘ Too short  variable
+  9ac2ea8   ~ OK        restrictedscript
+  27a1674   ✘ Too short  commands
+  0883315   ✘ Too short  bash
+  3bd87d5   ✘ Too short  commit
+  e9483ac   ✘ Too short  prompt
+  f6362a8   ✘ Too short  zsh
+  f73c73d   ✘ Too short  name
+  5ed76e3   ✘ Too short  dev
+  d7ea473   ⚠ Spanish  comentarios
+  61cbf37   ✘ Too short  decrypt
+  e0485e6   ~ OK        encrypt_sign
+  dd72829   ~ OK        trust_verification
+  0964325   ~ OK        trust_level
+  cbcf9ae   ✘ Too short  file
+  6c79570   ✘ Too short  encrypted
+  6796f44   ✘ Too short  codespace
+  8769433   ✘ Too short  changes
+  a8f6f39   ✘ Too short  ballpool
+  bf09e5b   ✘ Too short  8ballpool
+  6825f7c   ⚠ Spanish  comentario
+  ea88329   ✘ Too short  COMMIT
+  1f16ea3   ✘ Too short  COMMIT
+  0e98568   ~ OK        listprivatekeys
+  f7d1851   ✔ Great   Initial commit
+
+  ✔ Excellent (English + imperative) : [1m6[0m
+  ~ OK (English, no standard)        : [1m23[0m
+  ✘ Deficient (Spanish / too short)  : [1m44[0m
+  Score               : [1m8 / 30[0m
+
+[1m[0;36m══════════════════════════════════════════[0m
+[1m[0;36m  FINAL RESULT[0m
+[1m[0;36m══════════════════════════════════════════[0m
+  Commit quantity (max 30):              30 pts
+  Time 7am–9am ECT   (max 40):         34 pts
+  Messages in English(max 30):           8 pts
+  ──────────────────────────────────────────
+  TOTAL SCORE (max 100):                 72 pts
+
+  [1;33m[1m  GRADE: C  — Acceptable, but room for improvement.[0m
+
+  [1mTips:[0m
+  [1;33m⚠[0m Write messages in English with an imperative verb: 'Add login handler', 'Fix null pointer error'.
+

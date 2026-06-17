@@ -74,3 +74,4 @@ fg %1
 bg %1
 # Brings the function to the background
 
+nohup ./my_script.sh &
