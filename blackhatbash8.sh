@@ -56,3 +56,14 @@ printf "\n"
 
 sed '$d' newlog.txt
 printf "\n"
+
+sleep 100 &
+
+ps -ef | grep sleep
+# root           1       0  0 12:13 ?        00:00:00 /bin/sh -c echo Container started trap "exit 0" 15  exec "$@" while sleep 1 & wait $!; do :; done -
+# root       27038     740  0 13:10 pts/2    00:00:00 sleep 100
+# root       27097       1  0 13:11 ?        00:00:00 sleep 1
+# root       27103     740  0 13:11 pts/2    00:00:00 grep --color=auto sleep
+
+jobs
+# [1]+  Hecho                      sleep 100
